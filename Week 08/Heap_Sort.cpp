@@ -48,13 +48,22 @@ void displayArray(int arr[], int n)
 // main program
 int main()
 {
-   int heap_arr[] = {0, 2, -1, 8, 3, 2};
-   int n = sizeof(heap_arr)/sizeof(heap_arr[0]);
-   cout<<"Input array"<<endl;
-   displayArray(heap_arr,n);
-  
-   heapSort(heap_arr, n);
-  
-   cout << "Sorted array"<<endl;
-   displayArray(heap_arr, n);
+    int n;
+    cout << "Enter the number of elements in the array: ";
+    cin >> n;
+
+    int heap_arr[n];
+    cout << "Enter the elements of the array: ";
+    for(int i=0; i<n; i++)
+        cin >> heap_arr[i];
+
+    cout << "Input array: ";
+    displayArray(heap_arr,n);
+
+    heapSort(heap_arr, n);
+
+    cout << "Sorted array: ";
+    displayArray(heap_arr, n);
+
+    return 0;
 }
